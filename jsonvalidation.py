@@ -50,9 +50,14 @@ if __name__ == "__main__":
  
                     if not json_data:
                         error_list.append("JSON file contains nothing")
-                    elif not json_data[KEY_SCHM]:
-                        error_list.append("Schema \'" + json_data[KEY_SCHM] +
-                                          "\' not defined")
+                    elif KEY_SCHM not in json_data:
+                        error_list.append("Schema not defined\n" +
+                                          ' '*6 + "In file\t->\tmissing [{}]"
+                                          .format(KEY_SCHM))
+                    elif KEY_DATA not in json_data:
+                        error_list.append("Data not defined\n" +
+                                          ' '*6 + "In file\t->\tmissing [{}]"
+                                          .format(KEY_DATA))
                     else:
                         try:
                             with open(schm_dir + '/' + json_data[KEY_SCHM] + '.schema', 'r') as sf:
@@ -86,8 +91,8 @@ if __name__ == "__main__":
             if len(json_errors):
                 print(json_file_name, file=f)
                 for i in range(len(json_errors)):
-                    path_schm = KEY_DATA
-                    path_inst = KEY_DATA
+                    path_schm = '['+KEY_DATA+']'
+                    path_inst = '['+KEY_DATA+']'
                     print(' '*3 + "ERROR # {}:  ".format(i+1), end='', file=f)
                     
                     if type(json_errors[i]) is jsonschema.exceptions.ValidationError:
