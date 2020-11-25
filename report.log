@@ -1,8 +1,3 @@
-1eba2aa1-2acf-460d-91e6-55a8c3e3b7a3 Ч копи€.json
-   ERROR # 1:  Data not defined
-      In file	->	missing [data]
-
-
 1eba2aa1-2acf-460d-91e6-55a8c3e3b7a3.json
    ERROR # 1:  'unique_id' is a required property
       In schema	->	required properties of [data]:   ['id', 'labels', 'rr_id', 'timestamp', 'unique_id', 'user', 'user_id']
@@ -80,21 +75,6 @@ e2d760c3-7e10-4464-ab22-7fda6b5e2562.json
    ERROR # 1:  'bad user id' is not of type 'integer'
       In schema	->	type of [data][user_id] must be:   integer
       In file	->	value of [data][user_id]:   bad user id
-
-
-f5656ff6-29e1-46b0-8d8a-ff77f9cc0953 Ч копи€ Ч копи€ Ч копи€.json
-   ERROR # 1:  Schema not defined
-      In file	->	missing [event]
-
-
-f5656ff6-29e1-46b0-8d8a-ff77f9cc0953 Ч копи€ Ч копи€.json
-   ERROR # 1:  Unable to find or load defined Schema
-      In file	->	defined Schema:   'None'
-
-
-f5656ff6-29e1-46b0-8d8a-ff77f9cc0953 Ч копи€.json
-   ERROR # 1:  Unable to find or load defined Schema
-      In file	->	defined Schema:   ''
 
 
 fb1a0854-9535-404d-9bdd-9ec0abb6cd6c.json
